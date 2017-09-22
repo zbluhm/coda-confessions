@@ -51,10 +51,9 @@ $(function() {
 
   function createConfessionLabel(confession) {
     console.log('confession', confession);
-    let $label = $('<label>').text(confession.message);
     $('<li>')
+      .text(confession.message)
       .attr('data-id', confession.id)
-      .append($label)
       .appendTo($('.confession-list'));
   }
 
