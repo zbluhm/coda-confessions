@@ -1,8 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css?family=Prata');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/img/back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+#tipsForm{
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.user{
+  width: 30vw;
+  margin: 0 auto;
+}
+
+
+.div {
+margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Prata', serif;
+  font-size: 4em;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  margin: 20px auto;
+
+}
+
+.form-group {
+  margin: 0 auto;
+}
+
+.results {
+  top: 20px;
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 30vh;
+  background-color: white;
+}
+
+ul li {
+  text-decoration: none;
 }
