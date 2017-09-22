@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "coda-confessions",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "coda-confessions",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "coda-confessions",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
