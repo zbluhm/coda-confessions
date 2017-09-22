@@ -5,12 +5,12 @@ var db = require('../models');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     //return all confessions
-    db.confession.findAll().then(function(confessions) {
+    db.confession.findAll({include: [{model: db.user}]}).then(function(confessions) {
         if (!confessions) throw Error();
         res.status(200).json(confessions);
     })
       .catch(function(error) {
-          res.json(error);
+          res.json(error.toString());
       });
 });
 

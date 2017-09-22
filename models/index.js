@@ -30,7 +30,9 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db.confession.belongsTo(db.user, {foreignKey: 'id'});
+db.user.hasMany(db.confession);
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
 module.exports = db;
