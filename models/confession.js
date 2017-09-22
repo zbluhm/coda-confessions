@@ -1,14 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Confession = sequelize.define('Confession', {
+  var confession = sequelize.define('confession', {
     message: DataTypes.TEXT,
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-          Confession.belongsTo(models.User);
+          confession.belongsTo(models.user);
       }
     }
   });
-  return Confession;
+  return confession;
 };
