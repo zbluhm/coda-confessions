@@ -44,8 +44,9 @@ h1 {
   width: 30vw;
   margin: 0 auto;
   margin-top: 20px;
-  height: 30vh;
+  height: 200px;
   background-color: white;
+  overflow: scroll;
 }
 
 ul li {

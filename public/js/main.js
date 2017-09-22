@@ -9,7 +9,10 @@ $(function() {
 
   $('#tipsForm').on('keyup', event => {
     event.preventDefault();
-    let val = $(this).val();
+    if (event.which != 13) {
+      return;
+    }
+    let val = $('#tipsForm').val();
     console.log('input val:', val);
     $(this).val('');
     return $.ajax({
@@ -17,7 +20,7 @@ $(function() {
       method: "POST",
       data: {
         "message": val,
-        "user": $('#username').val()
+        "user": $('#user').val()
       }
     })
     .done(function(response) {
