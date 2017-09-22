@@ -13,18 +13,19 @@ $(function() {
       return;
     }
     let val = $('#tipsForm').val();
+    console.log('user val', $('#user').val());
     console.log('input val:', val);
-    $(this).val('');
     return $.ajax({
       url: "/confessions",
       method: "POST",
       data: {
         "message": val,
-        "user": $('#user').val()
+        "name": $('#user').val()
       }
     })
     .done(function(response) {
       console.log('response', response);
+      $('#tipsForm').val('');
       createConfessionLabel(response);
     })
     .fail(function(error) {
@@ -54,10 +55,14 @@ $(function() {
 
   function createConfessionLabel(confession) {
     console.log('confession', confession);
-    $('<li>')
-      .text(confession.message)
-      .attr('data-id', confession.id)
-      .appendTo($('.confession-list'));
+    $(`
+      <div class="card w-30 results">
+        <div class="card-block confession-list">
+          <h3 class="username">${confession.user.name}</h3>
+          <p class="confession">${confession.message || confession.result.message}</p>
+        </div>
+      </div>
+    `).appendTo($('body'));
   }
 
 });
