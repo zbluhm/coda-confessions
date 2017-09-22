@@ -1,16 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Prata');
-
 body {
-  background-image: url('../img/bck.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.coder {
-  text-align: center;
-  font-family: 'Prata', serif;
-  font-size: 4em !important;
-  letter-spacing: 2px;
-  color: white;
+a {
+  color: #00B7FF;
 }
