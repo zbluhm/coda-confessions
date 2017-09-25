@@ -25,7 +25,7 @@ router.post('/', function (req, res, next) {
             userId: user.id
         }).then(result => {
             if (!result) throw Error();
-            res.status(200).json(result);
+            res.status(200).json({result, user});
         }).catch(function (error) {
             res.json(error.toString())
         })
